@@ -14,9 +14,9 @@ app.use(express.json());
 app.use(cors({
   origin: 'https://opezeefe.netlify.app'
 }));
-app.use('/',(req, res) => {
-    res.send("This is a Cross Platform Application Launcher!!!")
-})
+// app.use('/',(req, res) => {
+//     res.send("This is a Cross Platform Application Launcher!!!")
+// })
 
 app.use('/uploads', express.static('uploads'));
 app.use('/apps', appRoutes);

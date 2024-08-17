@@ -27,7 +27,7 @@ export const getAllApps = async (req, res) => {
     // Assuming 'icon' is the filename stored in the database
     const appsWithFullPath = apps.map(app => ({
       ...app.toObject(),
-      icon: `http://localhost:5000/uploads/${app.icon}`, // Update this URL
+      icon: `https://ezeebe.onrender.com/uploads/${app.icon}`, // Update this URL
     }));
 
     res.status(200).json(appsWithFullPath);
@@ -88,7 +88,7 @@ export const getSpecificApp = async (req, res) => {
     // Construct the full path to the image
     const appWithFullPath = {
       ...app.toObject(),
-      icon: `http://localhost:5000/uploads/${app.icon}`, // Update this URL
+      icon: `https://ezeebe.onrender.com/uploads/${app.icon}`, // Update this URL
     };
     
     res.status(200).json(appWithFullPath);
