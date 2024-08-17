@@ -126,22 +126,3 @@ export const launchApp = async (req, res) => {
   }
 };
 
-export const launchAppwithcurl = async (req, res) => {
-  try {
-    const { appPath, param } = req.body;
-
-    const command = `"${appPath}" ${param}`;
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error('Error executing command:', error.message);
-        return res.status(500).send('Error launching application');
-      }
-      res.send('Application launched successfully');
-    });
-    
-
-  } catch (error) {
-    console.error('Error getting app details:', error.message);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-};

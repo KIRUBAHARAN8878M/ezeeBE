@@ -1,7 +1,7 @@
 import express from 'express';
 import multer from 'multer';
 
-import  { createApp, deleteApp, getAllApps, getSpecificApp, updateApp, launchApp, launchAppwihcurl} from '../controllers/appsControllers.js';
+import  { createApp, deleteApp, getAllApps, getSpecificApp, updateApp, launchApp} from '../controllers/appsControllers.js';
 
 const router = express.Router();
 
@@ -33,6 +33,5 @@ router.get('/get/:id', getSpecificApp);
 
 router.post('/launcher/:id', launchApp);
 
-router.post('/launch', launchAppwihcurl);
 
 export default router;
